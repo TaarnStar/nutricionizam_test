@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "61e1c7f5-d21b-40fb-8007-6aea418e39a4",
+		"name": "Nutricionizam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10041769"
+	},
+	"item": [
+		{
+			"name": "Django POST with ?key={var}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/upit?key={test_viticaste}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upit"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{test_viticaste}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Django POST without key query string",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"var2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/upit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Django POST with ?key=var (no brackets)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"var2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/upit?key=var",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upit"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "var"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
